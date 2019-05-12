@@ -4,11 +4,15 @@ import time
 import signal
 import core.core as kb
 
-
-API_TOKEN = ''
-BASE_URL = 'https://api.telegram.org/bot{}/'.format(API_TOKEN)
+def load_api_key():
+    with open('key') as f:
+        global API_TOKEN 
+        API_TOKEN = f.read().strip()
+        global BASE_URL 
+        BASE_URL = 'https://api.telegram.org/bot{}/'.format(API_TOKEN)
 
 def create_url(url):
+    global BASE_URL
     return BASE_URL + url
 
 def create_message(chat_id, text):
@@ -86,6 +90,7 @@ def signal_handler(signal, frame):
 
 
 if __name__ == '__main__':
+    load_api_key()
     run = True
     signal.signal(signal.SIGINT, signal_handler)
     main()
