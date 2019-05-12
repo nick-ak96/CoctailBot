@@ -12,7 +12,7 @@ def load_knowledge():
 
 def query(prolog, message):
     results = []
-    for solution in prolog.query('hello_world({}, Result)'.format(message)):
+    for solution in prolog.query('hello_world(\'{}\', Result)'.format(message)):
         results.append(solution)
     return results
 
