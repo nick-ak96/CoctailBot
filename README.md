@@ -31,7 +31,7 @@ Install `swi-prolog` from [this link](http://www.swi-prolog.org/Download.html).
 ## Run the bot
 
 Running the bot is very simple, however you will need to get an API key first. Contact me, to get one. 
-Put this key in a file called `key` in the same directory where with the file `bot.py`. 
+Put this key in a file called `key` in the same directory with the file `bot.py`. 
 Once done, simply activate python environment that was setup before, navigate to project directory and run:
 
 ```
