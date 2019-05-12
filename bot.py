@@ -5,7 +5,7 @@ import signal
 import core.core as kb
 
 
-API_TOKEN = '830072627:AAHGp0poZTpGpdrHaTnKsv16BvfJwHeJCm4'
+API_TOKEN = ''
 BASE_URL = 'https://api.telegram.org/bot{}/'.format(API_TOKEN)
 
 def create_url(url):
