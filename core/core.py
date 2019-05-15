@@ -12,7 +12,11 @@ def load_knowledge():
 
 def query(prolog, message):
     results = []
-    for solution in prolog.query('hello_world(\'{}\', Result)'.format(message)):
+    message = message.replace("'", '\"')
+    answer =  prolog.query('hello("{}",Result)'.format(message))
+    print('Prolog answerd:')
+    for solution in answer:
+        print(solution)
         results.append(solution)
     return results
 
