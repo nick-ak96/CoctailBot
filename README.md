@@ -4,13 +4,13 @@ Jack The Bartender is a [telegram](https://telegram.org) bot.
 
 # Installation
 
-## Make sure you have python 3.x.x
+## Make sure you have Python 3.x.x
 
 Check python version by typing:
 `python --version`
 or`python3 --version`
 
-Further we will use `python` in all of the commands.
+Further we will use `python` as Python 3.x.x in all of the commands.
 
 ## Setting up environment
 In the project directory run the following commands to set up virtual environment.
