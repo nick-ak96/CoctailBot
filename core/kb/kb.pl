@@ -17,6 +17,7 @@ abilities. % TODO
 % ***********************************************************************
 % Coctails knowledge base
 % https://www.cocktailflow.com
+% https://www.thespruceeats.com/best-recipes-for-shots-and-shooters-4151053
 % other sources ...
 % ***********************************************************************
 
@@ -24,15 +25,31 @@ abilities. % TODO
 % name, base ingredient, list of ingredients
 % -----------------------------------------------------------------------
 cocktail(mojito, rum, [mint, rum, lime, ice, soda]).
+cocktail(margo, malvazija, [malvazija, mint, limon, ice, radenska, elder_syrup]).
+cocktail(hugo, prosecco, [prosecco, mint, lime, ice, soda, elder_syrup]).
+cocktail(spritz, white_wine, [white_wine, soda, ice]).
+cocktail(spritz_veneziano, prosecco, [prosecco, aperol, soda, ice]).
+cocktail(greentini, vodka, [vodka, midori, ice]).
+cocktail(apocalypse_now, tequila, [tequila, irish cream, dry_vermounth])
+cocktail(b-52, grand_mariner, [grand_mariner, baileys, irish_cream, kahula])
+cocktail(cuba_libre, bacardi, [bacardi, lime, cola, ice])
+cocktail(beton, beer, [beer, rakija])
 
 
 
-% cocktail types: short, long, shooter, etc
+% cocktail types: short, long, shooter, midle, etc
 % -----------------------------------------------------------------------
 % mojito
 cocktail_type(long, mojito).
-% cuba libre
-% ...
+cocktail_type(long, margo).
+cocktail_type(long, hugo).
+cocktail_type(long, spritz).
+cocktail_type(long, spritz_veneziano).
+cocktail_type(midle, greentini).
+cocktail_type(short, apocalypse_now).
+cocktail_type(shooter, b-52).
+cocktail_type(long, cuba_libre).
+cocktail_type(long, beton).
 
 
 
@@ -40,6 +57,15 @@ cocktail_type(long, mojito).
 % -----------------------------------------------------------------------
 % mojito
 cocktail_season(summer, mojito).
+cocktail_season(summer, margo).
+cocktail_season(summer, hugo).
+cocktail_season(summer, spritz).
+cocktail_season(summer, spritz_veneziano).
+cocktail_season(summer, greentini).
+cocktail_season(winter, apocalypse_now).
+cocktail_season(winter, b-52).
+cocktail_season(summer, cuba_libre).
+cocktail_season(all_seasson, beton).
 
 
 
@@ -47,13 +73,30 @@ cocktail_season(summer, mojito).
 % -----------------------------------------------------------------------
 % mojito
 cocktail_adj(refreshing, mojito).
+cocktail_adj(sweet_istra, margo).
+cocktail_adj(sweet, hugo).
+cocktail_adj(refreshing, spritz).
+cocktail_adj(relaxing, spritz_veneziano).
+cocktail_adj(plain, greentini).
+cocktail_adj(powerful, apocalypse_now).
+cocktail_adj(worming, b-52).
+cocktail_adj(refreshing, cuba_libre).
+cocktail_adj(beerish, beton).
 
 
 
 % cocktail strength: nonalkoholic, weak, light, medium, strong, extremly_strong
 % -----------------------------------------------------------------------
 cocktail_strength(light, mojito).
-
+cocktail_strength(weak, margo).
+cocktail_strength(weak, hugo).
+cocktail_strength(light, spritz).
+cocktail_strength(medium, spritz_veneziano).
+cocktail_strength(medium, greentini).
+cocktail_strength(strong, apocalypse_now).
+cocktail_strength(strong, b-52).
+cocktail_strength(light, cuba_libre).
+cocktail_strength(medium, beton).
 
 
 
