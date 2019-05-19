@@ -26,6 +26,14 @@ top_cocktails(_, Result) :-
 	Result = 'mojito, cuba_libre, hugo'.
 
 
+% some error respone
+error_response :-
+	error_response(_, Result),
+	write(Result).
+error_response(_, Result) :-
+	Result = 'Sorry, we do not do this here.'.
+
+
 
 
 % ***********************************************************************

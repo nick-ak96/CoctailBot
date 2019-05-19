@@ -29,9 +29,14 @@ def process_prolog_answer(answer):
     return results
     
 def map_command_to_prolog_query(command):
-    return {
-            "/top_cocktails": "top_cocktails(_, Result)"
-    }[command]
+    try:
+        return {
+            "/top_cocktails": "top_cocktails(_, Result)",
+            "/start": "hello(_, Result)",
+            "/abilities": "abilities(_, Result)"
+        }[command]
+    except KeyError:
+        return "error_response(_, Result)"
     
 
 def process_command(prolog, command):
