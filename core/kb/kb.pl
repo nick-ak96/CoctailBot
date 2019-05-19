@@ -79,7 +79,7 @@ cocktail_adj(refreshing, spritz).
 cocktail_adj(relaxing, spritz_veneziano).
 cocktail_adj(plain, greentini).
 cocktail_adj(powerful, apocalypse_now).
-cocktail_adj(worming, b-52).
+cocktail_adj(warming, b-52).
 cocktail_adj(refreshing, cuba_libre).
 cocktail_adj(beerish, beton).
 
