@@ -34,10 +34,10 @@ cocktail(hugo, prosecco, [prosecco, mint, lime, ice, soda, elder_syrup]).
 cocktail(spritz, white_wine, [white_wine, soda, ice]).
 cocktail(spritz_veneziano, prosecco, [prosecco, aperol, soda, ice]).
 cocktail(greentini, vodka, [vodka, midori, ice]).
-cocktail(apocalypse_now, tequila, [tequila, irish cream, dry_vermounth])
-cocktail(b-52, grand_mariner, [grand_mariner, baileys, irish_cream, kahula])
-cocktail(cuba_libre, bacardi, [bacardi, lime, cola, ice])
-cocktail(beton, beer, [beer, rakija])
+cocktail(apocalypse_now, tequila, [tequila, irish_cream, dry_vermounth]).
+cocktail(b-52, grand_mariner, [grand_mariner, baileys, irish_cream, kahula]).
+cocktail(cuba_libre, bacardi, [bacardi, lime, cola, ice]).
+cocktail(beton, beer, [beer, rakija]).
 
 
 
@@ -160,11 +160,30 @@ evaluate_predicates([[Predicate, Parameter]|T], Result) :-
 % Input message processings
 % ***********************************************************************
 
+%the known keywords manually updated list containing also other keywords like search name , to search by name ecc...
+knownKeywords(["long","refreshing","short","middle","summer"]).
+
+%find keyowrds by intersecting the known keywords with the message
+findKeywords(A,L):-knownKeywords(B),
+    intersect(A,B,L).
+
+intersect([],_,[]).
+intersect([X|R],Y,[X|Z]) :- member(X,Y),!,intersect(R,Y,Z).
+intersect([X|R],Y,Z) :- non_member(X,Y),!,intersect(R,Y,Z).
+   
+non_member(X,[Y|T]) :- X \== Y, non_member(X,T).
+non_member(_,[]).
+
+
+
+
 % get list of keywords from string
 get_keywords(StringMessage, KeywordsList) :-
-	% TODO: find keywords in a message, simply store known words
-	% that can be used in a query as a parameter.
-	KeywordsList = ["long"].
+	string_lower(StringMessage,StringMessageLower),
+	split_string(StringMessageLower," ","",ListMessage),
+	findKeywords(ListMessage,KeywordsList).
+
+
 
 % aux keyward mapper
 % keyword string, predicate that is associated with the keyword, keyword predicate
