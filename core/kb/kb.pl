@@ -8,13 +8,23 @@ hello(_,Result) :-
 	Result = 'Hello, my name is Jack. Would you like something to drink?'.
 
 % what can Jack do
-Abilities = 'Okay, then! I can help you prepare some cocktails, you can write 
-me ingredients that you already have and I can show you all cocktails that you 
-can prepere with these ingredients that I know of. But you can  also write what 
-type of drink you wish long, short, medium, shooter or strong, week, light, 
-non-alcoholic, you can choose the season of the cocktail or we can eaven try to 
-search by the cocktail mood / taste. Or you can just search for ingredients for 
-your coctail by it's name.'.
+abilities :- abilities(_,Result), write(Result).
+abilities(_, Result) :- 
+	Result = 'Okay, then! I can help you prepare some cocktails. You can write \
+me ingredients that you already have and I can show you all the cocktails that you \
+can prepere with these ingredients that I know of. Also, you can write what \
+type of drink you wish, e.g. long, short, medium, shooter or strong, week, light, \
+non-alcoholic... You can choose the season of the cocktail or we can even try to \
+search by the cocktail mood / taste. Or you can just search for cocktail recepies \
+by its name.'.
+
+% TODO: top cocktails. Just testing direct commands from bot
+top_cocktails :-
+	top_cocktails(_, Result),
+	write(Result).
+top_cocktails(_, Result) :-
+	Result = 'mojito, cuba_libre, hugo'.
+
 
 
 
@@ -35,7 +45,7 @@ cocktail(spritz, white_wine, [white_wine, soda, ice]).
 cocktail(spritz_veneziano, prosecco, [prosecco, aperol, soda, ice]).
 cocktail(greentini, vodka, [vodka, midori, ice]).
 cocktail(apocalypse_now, tequila, [tequila, irish_cream, dry_vermounth]).
-cocktail(b-52, grand_mariner, [grand_mariner, baileys, irish_cream, kahula]).
+cocktail(b52, grand_mariner, [grand_mariner, baileys, irish_cream, kahula]).
 cocktail(cuba_libre, bacardi, [bacardi, lime, cola, ice]).
 cocktail(beton, beer, [beer, rakija]).
 
@@ -51,7 +61,7 @@ cocktail_type(long, spritz).
 cocktail_type(long, spritz_veneziano).
 cocktail_type(midle, greentini).
 cocktail_type(short, apocalypse_now).
-cocktail_type(shooter, b-52).
+cocktail_type(shooter, b52).
 cocktail_type(long, cuba_libre).
 cocktail_type(long, beton).
 
@@ -67,7 +77,7 @@ cocktail_season(summer, spritz).
 cocktail_season(summer, spritz_veneziano).
 cocktail_season(summer, greentini).
 cocktail_season(winter, apocalypse_now).
-cocktail_season(winter, b-52).
+cocktail_season(winter, b52).
 cocktail_season(summer, cuba_libre).
 cocktail_season(all_seasson, beton).
 
@@ -83,7 +93,7 @@ cocktail_adj(refreshing, spritz).
 cocktail_adj(relaxing, spritz_veneziano).
 cocktail_adj(plain, greentini).
 cocktail_adj(powerful, apocalypse_now).
-cocktail_adj(warming, b-52).
+cocktail_adj(warming, b52).
 cocktail_adj(refreshing, cuba_libre).
 cocktail_adj(beerish, beton).
 
@@ -98,7 +108,7 @@ cocktail_strength(light, spritz).
 cocktail_strength(medium, spritz_veneziano).
 cocktail_strength(medium, greentini).
 cocktail_strength(strong, apocalypse_now).
-cocktail_strength(strong, b-52).
+cocktail_strength(strong, b52).
 cocktail_strength(light, cuba_libre).
 cocktail_strength(medium, beton).
 
@@ -144,8 +154,7 @@ get_by_strength(Strength, Result) :-
 % get cocktails from user input 'StringMessage'
 get_cocktails(StringMessage, Result) :-
 	get_keywords(StringMessage, KeywordsList),
-	map_keywords_to_predicates(KeywordsList, PredicatesList),
-	evaluate_predicates(PredicatesList, Result).
+	evaluate_predicates(KeywordsList, Result).
 % evaluating composite queries
 evaluate_predicates([], _).
 evaluate_predicates([[Predicate, Parameter]|T], Result) :-
@@ -155,43 +164,86 @@ evaluate_predicates([[Predicate, Parameter]|T], Result) :-
 
 
 
+% ***********************************************************************
+% Keywords
+% ***********************************************************************
+
+% aux keyward mapper
+% keyword string, predicate that is associated with the keyword, keyword predicate
+% Note: keywords should be unique.
+
+% type keywords
+keyword("long", get_by_type, long).
+keyword("middle", get_by_type, middle).
+keyword("short", get_by_type, short).
+keyword("shooter", get_by_type, shooter).
+
+% season keywords
+keyword("winter", get_by_season, winter).
+keyword("spring", get_by_season, spring).
+keyword("summer", get_by_season, summer).
+keyword("fall", get_by_season, fall).
+keyword("all seasons", get_by_season, all_seasons).
+
+% taste / mood keywords
+keyword("refreshing", get_by_adj, refreshing).
+keyword("sweet istra", get_by_adj, sweet_istra).
+keyword("sweet", get_by_adj, sweet).
+keyword("relaxing", get_by_adj, relaxing).
+keyword("plain", get_by_adj, plain).
+keyword("powerful", get_by_adj, powerful).
+keyword("warming", get_by_adj, warming).
+keyword("beerish", get_by_adj, beerish).
+
+% strength keywords
+keyword("nonalkoholic", get_by_strength, nonalkoholic).
+keyword("weak", get_by_strength, weak).
+keyword("light", get_by_strength, light).
+keyword("medium", get_by_strength, medium).
+keyword("strong", get_by_strength, strong).
+keyword("extremly strong", get_by_strength, extremly_strong).
+
+keyword("hi", hello, _).
+keyword("hello", hello, _).
+keyword("yay", hello, _).
+
+
+
 
 % ***********************************************************************
 % Input message processings
 % ***********************************************************************
 
+% Probably do not need this, I left it commented
+% --------------------------
 %the known keywords manually updated list containing also other keywords like search name , to search by name ecc...
-knownKeywords(["long","refreshing","short","middle","summer"]).
-
+%knownKeywords(["long","refreshing","short","middle","summer"]).
+%
 %find keyowrds by intersecting the known keywords with the message
-findKeywords(A,L):-knownKeywords(B),
-    intersect(A,B,L).
-
-intersect([],_,[]).
-intersect([X|R],Y,[X|Z]) :- member(X,Y),!,intersect(R,Y,Z).
-intersect([X|R],Y,Z) :- non_member(X,Y),!,intersect(R,Y,Z).
-   
-non_member(X,[Y|T]) :- X \== Y, non_member(X,T).
-non_member(_,[]).
-
+%findKeywords(A,L):-knownKeywords(B),
+%    intersect(A,B,L).
+%
+%intersect([],_,[]).
+%intersect([X|R],Y,[X|Z]) :- member(X,Y),!,intersect(R,Y,Z).
+%intersect([X|R],Y,Z) :- non_member(X,Y),!,intersect(R,Y,Z).
+%   
+%non_member(X,[Y|T]) :- X \== Y, non_member(X,T).
+%non_member(_,[]).
+% --------------------------
 
 
 
 % get list of keywords from string
 get_keywords(StringMessage, KeywordsList) :-
-	string_lower(StringMessage,StringMessageLower),
-	split_string(StringMessageLower," ","",ListMessage),
-	findKeywords(ListMessage,KeywordsList).
+	string_lower(StringMessage, StringMessageLower),
+	split_string(StringMessageLower, " ", "", MessageTokensList),
+	find_keywords(MessageTokensList, KeywordsList).
 
-
-
-% aux keyward mapper
-% keyword string, predicate that is associated with the keyword, keyword predicate
-% Note: keywords should be unique.
-keyword("long", get_by_type, long).
-% TODO: add more keywords
-
-% map keywords to predicates
-map_keywords_to_predicates(KeywordsList, PredicatesList) :-
-	% TODO: map known keywords to key-value pairs: predicate-parameter
-	PredicatesList = [[get_by_type, long]].
+find_keywords([], []).
+find_keywords([H|T], KeywordsList) :-
+	\+ keyword(H, _, _),
+	find_keywords(T, KeywordsList).
+find_keywords([H|T], KeywordsList) :-
+	keyword(H, Predicate, Argument),
+	find_keywords(T, TempKeywordsList),
+	KeywordsList = [ [ Predicate, Argument ] | TempKeywordsList ].
