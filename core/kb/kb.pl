@@ -5,12 +5,16 @@
 % welcoming
 hello :- hello(_,Result), write(Result).
 hello(_,Result) :-
-	Result = 'Hello, my name is Jack. Would you like something?'.
+	Result = 'Hello, my name is Jack. Would you like something to drink?'.
 
 % what can Jack do
-abilities. % TODO
-
-
+Abilities = 'Okay, then! I can help you prepare some cocktails, you can write 
+me ingredients that you already have and I can show you all cocktails that you 
+can prepere with these ingredients that I know of. But you can  also write what 
+type of drink you wish long, short, medium, shooter or strong, week, light, 
+non-alcoholic, you can choose the season of the cocktail or we can eaven try to 
+search by the cocktail mood / taste. Or you can just search for ingredients for 
+your coctail by it's name.'.
 
 
 
@@ -19,7 +23,7 @@ abilities. % TODO
 % https://www.cocktailflow.com
 % https://www.thespruceeats.com/best-recipes-for-shots-and-shooters-4151053
 % other sources ...
-% ***********************************************************************
+% **********************************************************************
 
 % cocktails
 % name, base ingredient, list of ingredients
