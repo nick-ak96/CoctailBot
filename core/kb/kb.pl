@@ -162,7 +162,12 @@ get_by_strength(Strength, Result) :-
 % get cocktails from user input 'StringMessage'
 get_cocktails(StringMessage, Result) :-
 	get_keywords(StringMessage, KeywordsList),
+	KeywordsList \== [],
 	evaluate_predicates(KeywordsList, Result).
+get_cocktails(StringMessage, Result) :-
+	get_keywords(StringMessage, KeywordsList),
+	KeywordsList == [],
+	error_response(_, Result).
 % evaluating composite queries
 evaluate_predicates([], _).
 evaluate_predicates([[Predicate, Parameter]|T], Result) :-
