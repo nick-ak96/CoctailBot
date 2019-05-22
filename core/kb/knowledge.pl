@@ -9,7 +9,7 @@
 	[
 		cocktail/3,
 		keyword/3, from_string_to_atom_list/2,
-		cocktail_recepie/2,
+		cocktail_recipe/2,
 		cocktail_type/2,
 		cocktail_season/2,
 		cocktail_adj/2,
@@ -36,21 +36,21 @@ cocktail('cuba libre', bacardi, [bacardi, lime, cola, ice]).
 cocktail(beton, beer, [beer, rakija]).
 
 
-% recepies
+% recipes
 % -----------------------------------------------------------------------
-cocktail_recepie(mojito, "TODO recepie").
-cocktail_recepie(margo, "TODO recepie").
-cocktail_recepie(hugo, "TODO recepie").
-cocktail_recepie(spritz, "TODO recepie").
-cocktail_recepie('spritz veneziano', "TODO recepie").
-cocktail_recepie(greentini, "TODO recepie").
-cocktail_recepie('apocalypse now', "TODO recepie").
-cocktail_recepie(b52, "TODO recepie").
-cocktail_recepie('cuba libre', "TODO recepie").
-cocktail_recepie(beton, "TODO recepie").
+cocktail_recipe(mojito, "TODO recipe").
+cocktail_recipe(margo, "TODO recipe").
+cocktail_recipe(hugo, "TODO recipe").
+cocktail_recipe(spritz, "TODO recipe").
+cocktail_recipe('spritz veneziano', "TODO recipe").
+cocktail_recipe(greentini, "TODO recipe").
+cocktail_recipe('apocalypse now', "TODO recipe").
+cocktail_recipe(b52, "TODO recipe").
+cocktail_recipe('cuba libre', "TODO recipe").
+cocktail_recipe(beton, "TODO recipe").
 
 
-% recepies
+% photos
 % -----------------------------------------------------------------------
 cocktail_photo(mojito, "[photo](https://cdn.diffords.com/contrib/stock-images/2016/1/01/20163e856fbeb76b298eb064a15897d2b5d6.jpg)").
 cocktail_photo(margo, "[photo](https://i.pinimg.com/originals/58/ff/a6/58ffa6a35fcd0bc4aa43997020fa77b9.png)").
@@ -142,10 +142,10 @@ keyword(String, get_cocktail_description, CocktailName) :-
 	sub_string(String, Start, _, 0, Temp),
 	atom_string(CocktailName, Temp).
 
-keyword(String, get_cocktail_recepie, CocktailName) :-
-	sub_string(String, Before, 10, After, "recepie of"),
+keyword(String, get_cocktail_recipe, CocktailName) :-
+	sub_string(String, Before, 9, After, "recipe of"),
 	After > 0,
-	Start is Before + 10 + 1,
+	Start is Before + 9 + 1,
 	sub_string(String, Start, _, 0, Temp),
 	atom_string(CocktailName, Temp).
 
@@ -206,6 +206,7 @@ keyword("strengths", get_all_cocktail_strengths, _).
 % greetings
 keyword("hi", hello, _).
 keyword("hello", hello, _).
+keyword("help", hello, _).
 
 
 % ***********************************************************************
@@ -226,7 +227,7 @@ If you already decided what kind of cocktail you want, just describe it for me a
 
 If you want to know more about a particular cocktail, simply ask me to `describe cocktail_name`.\n
 
-Sure, you would be interested to make one ;) Let me help you by telling you about the `recepie of cocktail_name`.\n
+Sure, you would be interested to make one ;) Let me help you by telling you about the `recipe of cocktail_name`.\n
 
 Jack is your friend, so, if you already bought some stuff you can ask me what `cocktails from ingredients: list_of_space_separated_ingredients` you can make.\n
 

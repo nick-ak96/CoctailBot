@@ -4,7 +4,7 @@
 
 :- module(queries, 
 	[
-		get_cocktail_recepie/2,
+		get_cocktail_recipe/2,
 		get_by_base/2,
 		get_by_ingredients/2,
 		get_by_type/2,
@@ -53,9 +53,9 @@ get_cocktail_description(Name, Result) :-
 	].
 
 
-% get cocktail recepie
-get_cocktail_recepie(Name, Result) :-
-	cocktail_recepie(Name, Result).
+% get cocktail recipe
+get_cocktail_recipe(Name, Result) :-
+	cocktail_recipe(Name, Result).
 
 % get all base spirits
 get_all_cocktail_base_spirits(_, Result) :-
