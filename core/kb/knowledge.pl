@@ -9,13 +9,14 @@
 	[
 		cocktail/3,
 		keyword/3, from_string_to_atom_list/2,
+		cocktail_recepie/2,
 		cocktail_type/2,
 		cocktail_season/2,
 		cocktail_adj/2,
 		cocktail_strength/2,
 		cocktail_strength/2,
 		hello/0, hello/2,
-		abilities/0, abilities/2,
+		%abilities/0, abilities/2,
 		unknown_response/0, unknown_response/2
 	]
 ).
@@ -33,6 +34,20 @@ cocktail(apocalypse_now, tequila, [tequila, irish_cream, dry_vermounth]).
 cocktail(b52, grand_mariner, [grand_mariner, baileys, irish_cream, kahula]).
 cocktail(cuba_libre, bacardi, [bacardi, lime, cola, ice]).
 cocktail(beton, beer, [beer, rakija]).
+
+
+% recepies
+% -----------------------------------------------------------------------
+cocktail_recepie(mojito, "TODO recepie").
+cocktail_recepie(margo, "TODO recepie").
+cocktail_recepie(hugo, "TODO recepie").
+cocktail_recepie(sprit, "TODO recepie").
+cocktail_recepie(spritz_veneziano, "TODO recepie").
+cocktail_recepie(greentini, "TODO recepie").
+cocktail_recepie(apocalypse_now, "TODO recepie").
+cocktail_recepie(b52, "TODO recepie").
+cocktail_recepie(cuba_libre, "TODO recepie").
+cocktail_recepie(beton, "TODO recepie").
 
 
 
@@ -107,10 +122,24 @@ cocktail_strength(medium, beton).
 % keyword(keyword string, predicate that is associated with the keyword, keyword predicate)
 % Note: keywords should be unique.
 
-keyword(String, get_by_ingredients, Ingredients) :-
-	sub_string(String, Before, 12, After, "ingredients:"),
+keyword(String, get_cocktail_description, CocktailName) :-
+	sub_string(String, Before, 8, After, "describe"),
 	After > 0,
-	Start is Before + 12 + 1,
+	Start is Before + 8 + 1,
+	sub_string(String, Start, _, 0, Temp),
+	atom_string(CocktailName, Temp).
+
+keyword(String, get_cocktail_recepie, CocktailName) :-
+	sub_string(String, Before, 10, After, "recepie of"),
+	After > 0,
+	Start is Before + 10 + 1,
+	sub_string(String, Start, _, 0, Temp),
+	atom_string(CocktailName, Temp).
+
+keyword(String, get_by_ingredients, Ingredients) :-
+	sub_string(String, Before, 27, After, "cocktails from ingredients:"),
+	After > 0,
+	Start is Before + 27 + 1,
 	sub_string(String, Start, _, 0, Temp),
 	split_string(Temp, " ", "", Temp1),
 	from_string_to_atom_list(Temp1, Ingredients).
@@ -167,7 +196,7 @@ keyword("hello", hello, _).
 keyword("yay", hello, _).
 
 % abilities
-keyword("abilities", abilities, _).
+%keyword("abilities", abilities, _).
 
 
 
@@ -179,19 +208,13 @@ keyword("abilities", abilities, _).
 % welcoming
 hello :- hello(_,Result), write(Result).
 hello(_,Result) :-
-	Result = "Hello, my name is Jack. Would you like something to drink?".
-
-
-% what can Jack do
-abilities :- abilities(_,Result), write(Result).
-abilities(_, Result) :- 
-	Result = "Okay, then! I can help you prepare some cocktails. You can write \
-me ingredients that you already have and I can show you all the cocktails that you \
-can prepere with these ingredients that I know of. Also, you can write what \
-type of drink you wish, e.g. long, short, medium, shooter or strong, week, light, \
-non-alcoholic... You can choose the season of the cocktail or we can even try to \
-search by the cocktail mood / taste. Or you can just search for cocktail recepies \
-by its name.".
+	Result = "Hello, my name is Jack. I am the bartender here.\n
+	I can help you discover or prepare some cocktails.\n
+	Use the following keywords to find out what kind of cocktails we have in the bar: \n\tbase spirits, types, seasons, tastes/moods and strengths.\n
+	If you already decided what kind of cocktail you want, just describe it for me and I will help you with the choice.\n
+	If you want to learn how to prepare some cocktails, simply type: recepie of cocktail_name.\n
+	You can also find out what you can make from the list of ingredients by asking: cocktails from ingredients: list_of_space_separated_ingredients.\n
+	Hope you will enjoy our bar ;-) ".
 
 
 % respone to unknown queries

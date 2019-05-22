@@ -4,12 +4,14 @@
 
 :- module(queries, 
 	[
+		get_cocktail_recepie/2,
 		get_by_base/2,
 		get_by_ingredients/2,
 		get_by_type/2,
 		get_by_season/2,
 		get_by_adj/2,
 		get_by_strength/2,
+		get_cocktail_description/2,
 		get_all_cocktail_base_spirits/2,
 		get_all_cocktail_types/2,
 		get_all_cocktail_seasons/2,
@@ -19,6 +21,49 @@
 ).
 
 :- use_module(knowledge).
+
+% describe cocktail
+get_cocktail_description(Name, Result) :-
+	cocktail(Name, _, Ingredients),
+	cocktail_type(Type, Name),
+	findall(S, cocktail_season(S, Name), SeasonsList),
+	findall(A, cocktail_adj(A, Name), AdjList),
+	cocktail_strength(Strength, Name),
+	Result = [
+		'Cocktail description:', 
+		'____name___________________________', 
+		Name,
+		'_',	
+		'_',	
+		'_',	
+		'____type___________________________', 
+		Type, 
+		'_',	
+		'_',	
+		'_',	
+		'____strength_______________________', 
+		Strength, 
+		'_',	
+		'_',	
+		'_',	
+		'____suitable during________________', 
+		SeasonsList, 
+		'_',	
+		'_',	
+		'_',	
+		'____features_______________________', 
+		AdjList,
+		'_',	
+		'_',	
+		'_',	
+		'____ingredients_______________________', 
+		Ingredients
+	].
+
+
+% get cocktail recepie
+get_cocktail_recepie(Name, Result) :-
+	cocktail_recepie(Name, Result).
 
 % get all base spirits
 get_all_cocktail_base_spirits(_, Result) :-
