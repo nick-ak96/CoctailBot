@@ -46,7 +46,7 @@ def process_message(prolog, message):
     results = kb.query(prolog, message)
     answer = ''
     for result in results:
-        answer += result['Result'] + '\n'
+        answer += result['Result'].decode()
     return answer
 
 def process_update(prolog, update):

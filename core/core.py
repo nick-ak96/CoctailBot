@@ -31,12 +31,10 @@ def process_prolog_answer(answer):
 def map_command_to_prolog_query(command):
     try:
         return {
-            "/top_cocktails": "top_cocktails(_, Result)",
-            "/start": "hello(_, Result)",
-            "/abilities": "abilities(_, Result)"
+            "/start": "hello(_, Result)"
         }[command]
     except KeyError:
-        return "error_response(_, Result)"
+        return "unknown_response(_, Result)"
     
 
 def process_command(prolog, command):
@@ -45,8 +43,4 @@ def process_command(prolog, command):
     return process_prolog_answer(answer)
 
 def process_message(prolog, message):
-    answer = query_prolog(prolog, f'get_cocktails(\"{message}\", Result)')
-    return process_prolog_answer(answer)
-
-
-# interpretation of queries
+    return query_prolog(prolog, f'ask(\"{message}\", Result)')
