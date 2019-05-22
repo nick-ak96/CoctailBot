@@ -18,7 +18,8 @@ def create_url(url):
 def create_message(chat_id, text):
     return { 
         'chat_id': chat_id, 
-        'text': text 
+        'text': text,
+        'parse_mode': 'Markdown'
     }
 
 def create_update_params(last_update_id):

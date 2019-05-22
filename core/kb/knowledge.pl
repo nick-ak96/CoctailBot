@@ -15,8 +15,8 @@
 		cocktail_adj/2,
 		cocktail_strength/2,
 		cocktail_strength/2,
+		cocktail_photo/2,
 		hello/0, hello/2,
-		%abilities/0, abilities/2,
 		unknown_response/0, unknown_response/2
 	]
 ).
@@ -25,14 +25,14 @@
 % name, base ingredient, list of ingredients
 % -----------------------------------------------------------------------
 cocktail(mojito, rum, [mint, rum, lime, ice, soda]).
-cocktail(margo, malvazija, [malvazija, mint, limon, ice, radenska, elder_syrup]).
-cocktail(hugo, prosecco, [prosecco, mint, lime, ice, soda, elder_syrup]).
-cocktail(spritz, white_wine, [white_wine, soda, ice]).
-cocktail(spritz_veneziano, prosecco, [prosecco, aperol, soda, ice]).
+cocktail(margo, malvazija, [malvazija, mint, limon, ice, radenska, 'elder syrup']).
+cocktail(hugo, prosecco, [prosecco, mint, lime, ice, soda, 'elder syrup']).
+cocktail(spritz, 'white wine', ['white wine', soda, ice]).
+cocktail('spritz veneziano', prosecco, [prosecco, aperol, soda, ice]).
 cocktail(greentini, vodka, [vodka, midori, ice]).
-cocktail(apocalypse_now, tequila, [tequila, irish_cream, dry_vermounth]).
-cocktail(b52, grand_mariner, [grand_mariner, baileys, irish_cream, kahula]).
-cocktail(cuba_libre, bacardi, [bacardi, lime, cola, ice]).
+cocktail('apocalypse now', tequila, [tequila, 'irish cream', 'dry vermounth']).
+cocktail(b52, 'grand mariner', ['grand mariner', baileys, 'irish cream', kahula]).
+cocktail('cuba libre', bacardi, [bacardi, lime, cola, ice]).
 cocktail(beton, beer, [beer, rakija]).
 
 
@@ -41,14 +41,27 @@ cocktail(beton, beer, [beer, rakija]).
 cocktail_recepie(mojito, "TODO recepie").
 cocktail_recepie(margo, "TODO recepie").
 cocktail_recepie(hugo, "TODO recepie").
-cocktail_recepie(sprit, "TODO recepie").
-cocktail_recepie(spritz_veneziano, "TODO recepie").
+cocktail_recepie(spritz, "TODO recepie").
+cocktail_recepie('spritz veneziano', "TODO recepie").
 cocktail_recepie(greentini, "TODO recepie").
-cocktail_recepie(apocalypse_now, "TODO recepie").
+cocktail_recepie('apocalypse now', "TODO recepie").
 cocktail_recepie(b52, "TODO recepie").
-cocktail_recepie(cuba_libre, "TODO recepie").
+cocktail_recepie('cuba libre', "TODO recepie").
 cocktail_recepie(beton, "TODO recepie").
 
+
+% recepies
+% -----------------------------------------------------------------------
+cocktail_photo(mojito, "[photo](https://cdn.diffords.com/contrib/stock-images/2016/1/01/20163e856fbeb76b298eb064a15897d2b5d6.jpg)").
+cocktail_photo(margo, "[photo](https://i.pinimg.com/originals/58/ff/a6/58ffa6a35fcd0bc4aa43997020fa77b9.png)").
+cocktail_photo(hugo, "[photo](https://gbc-cdn-public-media.azureedge.net/img70164.768x512.jpg)").
+cocktail_photo(spritz, "[photo](https://www.loveandoliveoil.com/wp-content/uploads/2018/07/spritz-cocktail-FEAT1.jpg)").
+cocktail_photo('spritz veneziano', "[photo](https://secure.getgoout.com/goout/resource?entity=ITALY_BASE&shortRef=9GzgdJxkEc)").
+cocktail_photo(greentini, "[photo](https://images.cocktailflow.com/v1/cocktail/w_300,h_540/cocktail_greentini-1.png)").
+cocktail_photo('apocalypse now', "[photo](https://media-cdn.tripadvisor.com/media/photo-s/15/f5/15/9a/photo0jpg.jpg)").
+cocktail_photo(b52, "[photo](https://i.pinimg.com/originals/10/ac/14/10ac14d18f819ff9b9d7605d81c96662.jpg)").
+cocktail_photo('cuba libre', "[photo](https://www.thebacklabel.com/wp-content/uploads/2017/07/cubelibre-1050x519.jpg)").
+cocktail_photo(beton, "[photo](https://cdn.liquor.com/wp-content/uploads/2016/09/23074244/20th-century-720x720-recipe.jpg)").
 
 
 % cocktail types: short, long, shooter, midle, etc
@@ -58,11 +71,11 @@ cocktail_type(long, mojito).
 cocktail_type(long, margo).
 cocktail_type(long, hugo).
 cocktail_type(long, spritz).
-cocktail_type(long, spritz_veneziano).
+cocktail_type(long, 'spritz veneziano').
 cocktail_type(midle, greentini).
-cocktail_type(short, apocalypse_now).
+cocktail_type(short, 'apocalypse now').
 cocktail_type(shooter, b52).
-cocktail_type(long, cuba_libre).
+cocktail_type(long, 'cuba libre').
 cocktail_type(long, beton).
 
 
@@ -74,12 +87,12 @@ cocktail_season(summer, mojito).
 cocktail_season(summer, margo).
 cocktail_season(summer, hugo).
 cocktail_season(summer, spritz).
-cocktail_season(summer, spritz_veneziano).
+cocktail_season(summer, 'spritz veneziano').
 cocktail_season(summer, greentini).
-cocktail_season(winter, apocalypse_now).
+cocktail_season(winter, 'apocalypse now').
 cocktail_season(winter, b52).
-cocktail_season(summer, cuba_libre).
-cocktail_season(all_seasons, beton).
+cocktail_season(summer, 'cuba libre').
+cocktail_season('all seasons', beton).
 
 
 
@@ -87,14 +100,14 @@ cocktail_season(all_seasons, beton).
 % -----------------------------------------------------------------------
 % mojito
 cocktail_adj(refreshing, mojito).
-cocktail_adj(sweet_istra, margo).
+cocktail_adj('sweet istra', margo).
 cocktail_adj(sweet, hugo).
 cocktail_adj(refreshing, spritz).
-cocktail_adj(relaxing, spritz_veneziano).
+cocktail_adj(relaxing, 'spritz veneziano').
 cocktail_adj(plain, greentini).
-cocktail_adj(powerful, apocalypse_now).
+cocktail_adj(powerful, 'apocalypse now').
 cocktail_adj(warming, b52).
-cocktail_adj(refreshing, cuba_libre).
+cocktail_adj(refreshing, 'cuba libre').
 cocktail_adj(beerish, beton).
 
 
@@ -105,11 +118,11 @@ cocktail_strength(light, mojito).
 cocktail_strength(weak, margo).
 cocktail_strength(weak, hugo).
 cocktail_strength(light, spritz).
-cocktail_strength(medium, spritz_veneziano).
+cocktail_strength(medium, 'spritz veneziano').
 cocktail_strength(medium, greentini).
-cocktail_strength(strong, apocalypse_now).
+cocktail_strength(strong, 'apocalypse now').
 cocktail_strength(strong, b52).
-cocktail_strength(light, cuba_libre).
+cocktail_strength(light, 'cuba libre').
 cocktail_strength(medium, beton).
 
 
@@ -162,11 +175,11 @@ keyword("winter", get_by_season, winter).
 keyword("spring", get_by_season, spring).
 keyword("summer", get_by_season, summer).
 keyword("fall", get_by_season, fall).
-keyword("all-seasons", get_by_season, all_seasons).
+keyword("all-seasons", get_by_season, 'all seasons').
 
 % taste / mood keywords
 keyword("refreshing", get_by_adj, refreshing).
-keyword("sweet istra", get_by_adj, sweet_istra).
+keyword("sweet-istra", get_by_adj, 'sweet istra').
 keyword("sweet", get_by_adj, sweet).
 keyword("relaxing", get_by_adj, relaxing).
 keyword("plain", get_by_adj, plain).
@@ -175,12 +188,12 @@ keyword("warming", get_by_adj, warming).
 keyword("beerish", get_by_adj, beerish).
 
 % strength keywords
-keyword("nonalkoholic", get_by_strength, nonalkoholic).
+keyword("nonalkoholic", get_by_strength, 'non alkoholic').
 keyword("weak", get_by_strength, weak).
 keyword("light", get_by_strength, light).
 keyword("medium", get_by_strength, medium).
 keyword("strong", get_by_strength, strong).
-keyword("extremly-strong", get_by_strength, extremly_strong).
+keyword("extremly-strong", get_by_strength, 'extremly strong').
 
 % informational
 keyword("spirits", get_all_cocktail_base_spirits, _).
@@ -193,12 +206,6 @@ keyword("strengths", get_all_cocktail_strengths, _).
 % greetings
 keyword("hi", hello, _).
 keyword("hello", hello, _).
-keyword("yay", hello, _).
-
-% abilities
-%keyword("abilities", abilities, _).
-
-
 
 
 % ***********************************************************************
@@ -208,13 +215,22 @@ keyword("yay", hello, _).
 % welcoming
 hello :- hello(_,Result), write(Result).
 hello(_,Result) :-
-	Result = "Hello, my name is Jack. I am the bartender here.\n
-	I can help you discover or prepare some cocktails.\n
-	Use the following keywords to find out what kind of cocktails we have in the bar: \n\tbase spirits, types, seasons, tastes/moods and strengths.\n
-	If you already decided what kind of cocktail you want, just describe it for me and I will help you with the choice.\n
-	If you want to learn how to prepare some cocktails, simply type: recepie of cocktail_name.\n
-	You can also find out what you can make from the list of ingredients by asking: cocktails from ingredients: list_of_space_separated_ingredients.\n
-	Hope you will enjoy our bar ;-) ".
+	Result = 
+"Hello, my name is Jack. I am the bartender here.\n
+I can help you discover or prepare some cocktails.\n
+
+I would be glad to telll you all about them. You can discover what `spirits` they are based on,\
+the `types` of cocktails,suitable `seasons`, some features like `tastes/moods` and of cource the `strengths`.\n
+
+If you already decided what kind of cocktail you want, just describe it for me and I will help you with the right choice.\n
+
+If you want to know more about a particular cocktail, simply ask me to `describe cocktail_name`.\n
+
+Sure, you would be interested to make one ;) Let me help you by telling you about the `recepie of cocktail_name`.\n
+
+Jack is your friend, so, if you already bought some stuff you can ask me what `cocktails from ingredients: list_of_space_separated_ingredients` you can make.\n
+
+Hope you will enjoy our bar!".
 
 
 % respone to unknown queries
