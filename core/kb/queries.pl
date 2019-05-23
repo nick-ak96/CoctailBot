@@ -37,8 +37,10 @@ get_cocktail_description(Name, Result) :-
 		"\n",	
 		'_type:_', 
 		Type, 
+		
 		'_strength:_', 
 		Strength, 
+		
 		'_suitable during:_', 
 		SeasonsList, 
 		"\n",	
