@@ -186,7 +186,7 @@ Enjoy!").
 % photos
 % -----------------------------------------------------------------------
 cocktail_photo(mojito, "[photo](https://cdn.diffords.com/contrib/stock-images/2016/1/01/20163e856fbeb76b298eb064a15897d2b5d6.jpg)").
-cocktail_photo(margo, "[photo](https://i.pinimg.com/originals/58/ff/a6/58ffa6a35fcd0bc4aa43997020fa77b9.png)").
+cocktail_photo(margo, "[photo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS12dBct6NFetIa-oLuCy_OSuvWt7bMe5gjnIpemi7r8Kg99xnUA)").
 cocktail_photo(hugo, "[photo](https://gbc-cdn-public-media.azureedge.net/img70164.768x512.jpg)").
 cocktail_photo(spricer, "[photo](http://www.sodasherpa.com/wp-content/uploads/2015/05/Soda-Sherpa-Sparkling-Wine-SodaStream.png)").
 cocktail_photo('spritz veneziano', "[photo](https://secure.getgoout.com/goout/resource?entity=ITALY_BASE&shortRef=9GzgdJxkEc)").
@@ -353,14 +353,14 @@ hello(_,Result) :-
 "Hello, my name is Jack. I am the bartender here.\n
 I can help you discover or prepare some cocktails.\n
 
-I would be glad to telll you all about them. You can discover what `spirits` they are based on,\
-the `types` of cocktails,suitable `seasons`, some features like `tastes/moods` and of cource the `strengths`.\n
+I would be glad to telll you all about them. You can discover what `spirits` they are based on, 
+the `types` of cocktails, suitable `seasons`, some features like `tastes/moods` and of cource the `strengths`.
 
-If you already decided what kind of cocktail you want, just describe it for me and I will help you with the right choice.\n
+If you already decided what kind of cocktail you want, just describe it for me and I will help you with the right choice.
 
-If you want to know more about a particular cocktail, simply ask me to `describe cocktail_name`.\n
+If you want to know more about a particular cocktail, simply ask me to `describe cocktail_name`.
 
-Sure, you would be interested to make one ;) Let me help you by telling you about the `recipe of cocktail_name`.\n
+Sure, you would be interested to make one ;) Let me help you by telling you about the `recipe of cocktail_name`.
 
 Jack is your friend, so, if you already bought some stuff you can ask me what `cocktails from ingredients: list_of_space_separated_ingredients` you can make.\n
 
