@@ -40,30 +40,40 @@ cocktail(submarine, beer, [beer, rakija]).
 % recipes
 % -----------------------------------------------------------------------
 cocktail_recipe(mojito, "
-1. Muddle sugar and lime wedges together in a glass.
+1. 
+Muddle sugar and lime wedges together in a glass.
 Press down on 2 wedges of lime and 2 teaspoons of caster sugar in a tankard or jar using a large spoon or pestle to extract flavour and aroma.
     
-2. Muddle mint.
+2. 
+Muddle mint.
 Pick 12 leaves from a sprig of mint and place in the glass. Press down gently on the mint, together with the sugar and lime.
     
-3. Add ice to a glass.
+3. 
+Add ice to a glass.
 Add crushed ice so the glass is 3/4 full.
     
-4. Add Captain Morgan White Rum and soda.
+4. 
+Add Captain Morgan White Rum and soda.
 Pour in Captain Morgan White Rum and a dash of soda water.
     
-5. Stir with a spoon.
+5. 
+Stir with a spoon.
 Stir the mixture thoroughly using a bar spoon until well combined.
     
-6. Add ice and a sprig of mint.
-Top up with more crushed ice and garnish with a sprig of mint.").
+6. 
+Add ice and a sprig of mint.
+Top up with more crushed ice and garnish with a sprig of mint.
+
+Enjoy!").
 
 cocktail_recipe(margo, "
     1. Scoop a handful of ice into a large wine glass along with some torn mint leaves.
     
     2. Add the elderflower cordial with a splash of Radenska then top up with Malvazija.
     
-    3. Give a quick stir and garnish with a wheel of limon.").
+    3. Give a quick stir and garnish with a wheel of limon.
+    
+    Enjoy!").
     
 cocktail_recipe(hugo, "
     1. Scoop a handful of ice into a large wine glass along with some torn mint leaves.
@@ -75,7 +85,9 @@ cocktail_recipe(hugo, "
 cocktail_recipe(spricer, "
     1. Pour cold white wine in large wine glass until is half full.
     
-    2. Fill up with cold soda.").
+    2. Fill up with cold soda.
+    
+    Enjoy!").
 
 cocktail_recipe('spritz veneziano', "
     1. Add ice to the old fashioned glass
@@ -84,7 +96,9 @@ cocktail_recipe('spritz veneziano', "
     
     3. Fill up the glass with club soda
     
-    4. Garnish with orange wheel.").
+    4. Garnish with orange wheel.
+    
+    Enjoy!").
     
 cocktail_recipe(greentini, "
     1. Fill up the shaker with ice.
@@ -95,7 +109,9 @@ cocktail_recipe(greentini, "
     
     4. Strain into the cocktail glass.
     
-    5. Garnish with lime wedge.").
+    5. Garnish with lime wedge.
+    
+    Enjoy!").
     
 cocktail_recipe('apocalypse now', "
     1. Pour the dry vermouth and tequila into a cocktail shaker filled with ice.
@@ -104,26 +120,34 @@ cocktail_recipe('apocalypse now', "
 
     3. Strain into a shot glass.
 
-    4. Float the Irish cream liqueur on top by slowly pouring it over the back of a bar spoon.").
+    4. Float the Irish cream liqueur on top by slowly pouring it over the back of a bar spoon.
+    
+    Enjoy!").
 
 cocktail_recipe(b52, "
     1. Pour the coffee liqueur into a shot glass.
 
     2. Float the Irish cream liqueur on top.
 
-    3.Float the Grand Marnier on top of the second layer.").
+    3.Float the Grand Marnier on top of the second layer.
+    
+    Enjoy!").
 
 cocktail_recipe('cuba libre', "
     1. Fill a tall glass with Ice.
 
     2. Pour in the Captain Morgan Original Rum and cola.
 
-    3. To serve, squeeze the lime over the drink and drop in.").
+    3. To serve, squeeze the lime over the drink and drop in.
+    
+    Enjoy!").
 
 cocktail_recipe(submarine, "
     1. Pour a half of liter or a pint of lager beer.
     
-    2. Drop the glass of shooter filled up with rakia or tequila and drop it in a glass of beer.").
+    2. Drop the glass of shooter filled up with rakia or tequila and drop it in a glass of beer.
+    
+    Enjoy!").
 
 
 % photos
