@@ -191,7 +191,7 @@ cocktail_photo(hugo, "[photo](https://gbc-cdn-public-media.azureedge.net/img7016
 cocktail_photo(spricer, "[photo](http://www.sodasherpa.com/wp-content/uploads/2015/05/Soda-Sherpa-Sparkling-Wine-SodaStream.png)").
 cocktail_photo('spritz veneziano', "[photo](https://secure.getgoout.com/goout/resource?entity=ITALY_BASE&shortRef=9GzgdJxkEc)").
 cocktail_photo(greentini, "[photo](https://images.cocktailflow.com/v1/cocktail/w_300,h_540/cocktail_greentini-1.png)").
-cocktail_photo('apocalypse now', "[photo](https://www.thespruceeats.com/thmb/ZT8na51Zknx8YXlMLPA5oOaYAtI=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/ApocalypseNow-Shot-f1d319ebb30d4da793843703116a5642.jpg)").
+cocktail_photo('apocalypse now', "[photo](https://ik.imagekit.io/stapleaffiliates/liquoronline/tr:w-750,pr-true,fo-auto/assets/images/uploads/2017/apocalypse-now-shooter-recipe.jpg").
 cocktail_photo(b52, "[photo](https://i.pinimg.com/originals/10/ac/14/10ac14d18f819ff9b9d7605d81c96662.jpg)").
 cocktail_photo('cuba libre', "[photo](https://www.thebacklabel.com/wp-content/uploads/2017/07/cubelibre-1050x519.jpg)").
 cocktail_photo(submarine, "[photo](https://urlzs.com/VDitE)").
