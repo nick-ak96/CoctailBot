@@ -70,87 +70,117 @@ Top up with more crushed ice and garnish with a sprig of mint.
 Enjoy!").
 
 cocktail_recipe(margo, "
-    1. Scoop a handful of ice into a large wine glass along with some torn mint leaves.
+
+MARGO
+
+1. Scoop a handful of ice into a large wine glass along with some torn mint leaves.
     
-    2. Add the elderflower cordial with a splash of Radenska then top up with Malvazija.
+2. Add the elderflower cordial with a splash of Radenska then top up with Malvazija.
     
-    3. Give a quick stir and garnish with a wheel of limon.
+3. Give a quick stir and garnish with a wheel of limon.
     
-    Enjoy!").
+Enjoy!").
     
 cocktail_recipe(hugo, "
-    1. Scoop a handful of ice into a large wine glass along with some torn mint leaves.
+
+HUGO
+
+1. Scoop a handful of ice into a large wine glass along with some torn mint leaves.
     
-    2. Add the elderflower cordial with a splash of soda water then top up with Prosecco.
+2. Add the elderflower cordial with a splash of soda water then top up with Prosecco.
     
-    3. Give a quick stir and garnish with a wheel of lime.").
+3. Give a quick stir and garnish with a wheel of lime.
+
+Enjoy!").
     
 cocktail_recipe(spricer, "
-    1. Pour cold white wine in large wine glass until is half full.
+
+SPRICER
+
+1. Pour cold white wine in large wine glass until is half full.
     
-    2. Fill up with cold soda.
+2. Fill up with cold soda.
     
-    Enjoy!").
+Enjoy!").
 
 cocktail_recipe('spritz veneziano', "
-    1. Add ice to the old fashioned glass
+
+SPRITZ VENETZIANO
+
+1. Add ice to the old fashioned glass
+  
+2. Add prosecco and aperol to the glass then stir together
     
-    2. Add prosecco and aperol to the glass then stir together
+3. Fill up the glass with club soda
     
-    3. Fill up the glass with club soda
+4. Garnish with orange wheel.
     
-    4. Garnish with orange wheel.
-    
-    Enjoy!").
+Enjoy!").
     
 cocktail_recipe(greentini, "
-    1. Fill up the shaker with ice.
+
+GREENTINI
+
+
+1. Fill up the shaker with ice.
     
-    2. Pour Midorivodka into the shaker.
+2. Pour Midorivodka into the shaker.
     
-    3. Shake well.
+3. Shake well.
     
-    4. Strain into the cocktail glass.
+4. Strain into the cocktail glass.
     
-    5. Garnish with lime wedge.
+5. Garnish with lime wedge.
     
-    Enjoy!").
+Enjoy!").
     
 cocktail_recipe('apocalypse now', "
-    1. Pour the dry vermouth and tequila into a cocktail shaker filled with ice.
-
-    2. Shake well.
-
-    3. Strain into a shot glass.
-
-    4. Float the Irish cream liqueur on top by slowly pouring it over the back of a bar spoon.
     
-    Enjoy!").
+APOCALYPSE NOW       
+    
+1. Pour the dry vermouth and tequila into a cocktail shaker filled with ice.
+
+2. Shake well.
+
+3. Strain into a shot glass.
+
+4. Float the Irish cream liqueur on top by slowly pouring it over the back of a bar spoon.
+    
+Enjoy!").
 
 cocktail_recipe(b52, "
-    1. Pour the coffee liqueur into a shot glass.
 
-    2. Float the Irish cream liqueur on top.
+B52
 
-    3.Float the Grand Marnier on top of the second layer.
+1. Pour the coffee liqueur into a shot glass.
+
+2. Float the Irish cream liqueur on top.
+
+3.Float the Grand Marnier on top of the second layer.
     
-    Enjoy!").
+Enjoy!").
 
 cocktail_recipe('cuba libre', "
-    1. Fill a tall glass with Ice.
 
-    2. Pour in the Captain Morgan Original Rum and cola.
+CUBA LIBRE
 
-    3. To serve, squeeze the lime over the drink and drop in.
+1. Fill a tall glass with Ice.
+
+2. Pour in the Captain Morgan Original Rum and cola.
+
+3. To serve, squeeze the lime over the drink and drop in.
     
-    Enjoy!").
+Enjoy!").
 
 cocktail_recipe(submarine, "
-    1. Pour a half of liter or a pint of lager beer.
+
+SUBMARINE
+
+1. Pour a half of liter or a pint of lager beer.
     
-    2. Drop the glass of shooter filled up with rakia or tequila and drop it in a glass of beer.
+2. Drop the glass of shooter filled up with rakia or tequila and drop it in a glass of beer.
     
-    Enjoy!").
+Enjoy!").
 
 
 % photos
