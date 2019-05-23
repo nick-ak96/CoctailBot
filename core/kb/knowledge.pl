@@ -40,23 +40,23 @@ cocktail(submarine, beer, [beer, rakija]).
 % recipes
 % -----------------------------------------------------------------------
 cocktail_recipe(mojito, "
-    1. Muddle sugar and lime wedges together in a glass.
-    Press down on 2 wedges of lime and 2 teaspoons of caster sugar in a tankard or jar using a large spoon or pestle to extract flavour and aroma.
+1. Muddle sugar and lime wedges together in a glass.
+Press down on 2 wedges of lime and 2 teaspoons of caster sugar in a tankard or jar using a large spoon or pestle to extract flavour and aroma.
     
-    2. Muddle mint.
-    Pick 12 leaves from a sprig of mint and place in the glass. Press down gently on the mint, together with the sugar and lime.
+2. Muddle mint.
+Pick 12 leaves from a sprig of mint and place in the glass. Press down gently on the mint, together with the sugar and lime.
     
-    3. Add ice to a glass.
-    Add crushed ice so the glass is 3/4 full.
+3. Add ice to a glass.
+Add crushed ice so the glass is 3/4 full.
     
-    4. Add Captain Morgan White Rum and soda.
-    Pour in Captain Morgan White Rum and a dash of soda water.
+4. Add Captain Morgan White Rum and soda.
+Pour in Captain Morgan White Rum and a dash of soda water.
     
-    5. Stir with a spoon.
-    Stir the mixture thoroughly using a bar spoon until well combined.
+5. Stir with a spoon.
+Stir the mixture thoroughly using a bar spoon until well combined.
     
-    6. Add ice and a sprig of mint.
-    Top up with more crushed ice and garnish with a sprig of mint.").
+6. Add ice and a sprig of mint.
+Top up with more crushed ice and garnish with a sprig of mint.").
 
 cocktail_recipe(margo, "
     1. Scoop a handful of ice into a large wine glass along with some torn mint leaves.
