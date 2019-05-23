@@ -47,10 +47,10 @@ cocktail_recipe(mojito, "
     Pick 12 leaves from a sprig of mint and place in the glass. Press down gently on the mint, together with the sugar and lime.
     
     3. Add ice to a glass.
-    Add crushed ice so the glass is ¾ full.
+    Add crushed ice so the glass is 3/4 full.
     
-    4. Add Captain Morgan White Rum® and soda.
-    Pour in Captain Morgan® White Rum and a dash of soda water.
+    4. Add Captain Morgan White Rum and soda.
+    Pour in Captain Morgan White Rum and a dash of soda water.
     
     5. Stir with a spoon.
     Stir the mixture thoroughly using a bar spoon until well combined.
