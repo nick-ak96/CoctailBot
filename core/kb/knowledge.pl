@@ -2,6 +2,7 @@
 % Coctails knowledge base
 % https://www.cocktailflow.com
 % https://www.thespruceeats.com/best-recipes-for-shots-and-shooters-4151053
+% https://uk.thebar.com/
 % other sources ...
 % **********************************************************************
 
@@ -27,27 +28,102 @@
 cocktail(mojito, rum, [mint, rum, lime, ice, soda]).
 cocktail(margo, malvazija, [malvazija, mint, limon, ice, radenska, 'elder syrup']).
 cocktail(hugo, prosecco, [prosecco, mint, lime, ice, soda, 'elder syrup']).
-cocktail(spritz, 'white wine', ['white wine', soda, ice]).
+cocktail(spricer, 'white wine', ['white wine', soda, ice]).
 cocktail('spritz veneziano', prosecco, [prosecco, aperol, soda, ice]).
 cocktail(greentini, vodka, [vodka, midori, ice]).
 cocktail('apocalypse now', tequila, [tequila, 'irish cream', 'dry vermounth']).
 cocktail(b52, 'grand mariner', ['grand mariner', baileys, 'irish cream', kahula]).
 cocktail('cuba libre', bacardi, [bacardi, lime, cola, ice]).
-cocktail(beton, beer, [beer, rakija]).
+cocktail(submarine, beer, [beer, rakija]).
 
 
 % recipes
 % -----------------------------------------------------------------------
-cocktail_recipe(mojito, "TODO recipe").
-cocktail_recipe(margo, "TODO recipe").
-cocktail_recipe(hugo, "TODO recipe").
-cocktail_recipe(spritz, "TODO recipe").
-cocktail_recipe('spritz veneziano', "TODO recipe").
-cocktail_recipe(greentini, "TODO recipe").
-cocktail_recipe('apocalypse now', "TODO recipe").
-cocktail_recipe(b52, "TODO recipe").
-cocktail_recipe('cuba libre', "TODO recipe").
-cocktail_recipe(beton, "TODO recipe").
+cocktail_recipe(mojito, "
+    1. Muddle sugar and lime wedges together in a glass.
+    Press down on 2 wedges of lime and 2 teaspoons of caster sugar in a tankard or jar using a large spoon or pestle to extract flavour and aroma.
+    
+    2. Muddle mint.
+    Pick 12 leaves from a sprig of mint and place in the glass. Press down gently on the mint, together with the sugar and lime.
+    
+    3. Add ice to a glass.
+    Add crushed ice so the glass is ¾ full.
+    
+    4. Add Captain Morgan White Rum® and soda.
+    Pour in Captain Morgan® White Rum and a dash of soda water.
+    
+    5. Stir with a spoon.
+    Stir the mixture thoroughly using a bar spoon until well combined.
+    
+    6. Add ice and a sprig of mint.
+    Top up with more crushed ice and garnish with a sprig of mint.").
+
+cocktail_recipe(margo, "
+    1. Scoop a handful of ice into a large wine glass along with some torn mint leaves.
+    
+    2. Add the elderflower cordial with a splash of Radenska then top up with Malvazija.
+    
+    3. Give a quick stir and garnish with a wheel of limon.").
+    
+cocktail_recipe(hugo, "
+    1. Scoop a handful of ice into a large wine glass along with some torn mint leaves.
+    
+    2. Add the elderflower cordial with a splash of soda water then top up with Prosecco.
+    
+    3. Give a quick stir and garnish with a wheel of lime.").
+    
+cocktail_recipe(spricer, "
+    1. Pour cold white wine in large wine glass until is half full.
+    
+    2. Fill up with cold soda.").
+
+cocktail_recipe('spritz veneziano', "
+    1. Add ice to the old fashioned glass
+    
+    2. Add prosecco and aperol to the glass then stir together
+    
+    3. Fill up the glass with club soda
+    
+    4. Garnish with orange wheel.").
+    
+cocktail_recipe(greentini, "
+    1. Fill up the shaker with ice.
+    
+    2. Pour Midorivodka into the shaker.
+    
+    3. Shake well.
+    
+    4. Strain into the cocktail glass.
+    
+    5. Garnish with lime wedge.").
+    
+cocktail_recipe('apocalypse now', "
+    1. Pour the dry vermouth and tequila into a cocktail shaker filled with ice.
+
+    2. Shake well.
+
+    3. Strain into a shot glass.
+
+    4. Float the Irish cream liqueur on top by slowly pouring it over the back of a bar spoon.").
+
+cocktail_recipe(b52, "
+    1. Pour the coffee liqueur into a shot glass.
+
+    2. Float the Irish cream liqueur on top.
+
+    3.Float the Grand Marnier on top of the second layer.").
+
+cocktail_recipe('cuba libre', "
+    1. Fill a tall glass with Ice.
+
+    2. Pour in the Captain Morgan Original Rum and cola.
+
+    3. To serve, squeeze the lime over the drink and drop in.").
+
+cocktail_recipe(submarine, "
+    1. Pour a half of liter or a pint of lager beer.
+    
+    2. Drop the glass of shooter filled up with rakia or tequila and drop it in a glass of beer.").
 
 
 % photos
@@ -55,13 +131,13 @@ cocktail_recipe(beton, "TODO recipe").
 cocktail_photo(mojito, "[photo](https://cdn.diffords.com/contrib/stock-images/2016/1/01/20163e856fbeb76b298eb064a15897d2b5d6.jpg)").
 cocktail_photo(margo, "[photo](https://i.pinimg.com/originals/58/ff/a6/58ffa6a35fcd0bc4aa43997020fa77b9.png)").
 cocktail_photo(hugo, "[photo](https://gbc-cdn-public-media.azureedge.net/img70164.768x512.jpg)").
-cocktail_photo(spritz, "[photo](https://www.loveandoliveoil.com/wp-content/uploads/2018/07/spritz-cocktail-FEAT1.jpg)").
+cocktail_photo(spricer, "[photo](http://www.sodasherpa.com/wp-content/uploads/2015/05/Soda-Sherpa-Sparkling-Wine-SodaStream.png)").
 cocktail_photo('spritz veneziano', "[photo](https://secure.getgoout.com/goout/resource?entity=ITALY_BASE&shortRef=9GzgdJxkEc)").
 cocktail_photo(greentini, "[photo](https://images.cocktailflow.com/v1/cocktail/w_300,h_540/cocktail_greentini-1.png)").
-cocktail_photo('apocalypse now', "[photo](https://media-cdn.tripadvisor.com/media/photo-s/15/f5/15/9a/photo0jpg.jpg)").
+cocktail_photo('apocalypse now', "[photo](https://www.thespruceeats.com/thmb/ZT8na51Zknx8YXlMLPA5oOaYAtI=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/ApocalypseNow-Shot-f1d319ebb30d4da793843703116a5642.jpg)").
 cocktail_photo(b52, "[photo](https://i.pinimg.com/originals/10/ac/14/10ac14d18f819ff9b9d7605d81c96662.jpg)").
 cocktail_photo('cuba libre', "[photo](https://www.thebacklabel.com/wp-content/uploads/2017/07/cubelibre-1050x519.jpg)").
-cocktail_photo(beton, "[photo](https://cdn.liquor.com/wp-content/uploads/2016/09/23074244/20th-century-720x720-recipe.jpg)").
+cocktail_photo(submarine, "[photo](https://urlzs.com/VDitE)").
 
 
 % cocktail types: short, long, shooter, midle, etc
@@ -70,13 +146,13 @@ cocktail_photo(beton, "[photo](https://cdn.liquor.com/wp-content/uploads/2016/09
 cocktail_type(long, mojito).
 cocktail_type(long, margo).
 cocktail_type(long, hugo).
-cocktail_type(long, spritz).
+cocktail_type(long, spricer).
 cocktail_type(long, 'spritz veneziano').
 cocktail_type(midle, greentini).
 cocktail_type(short, 'apocalypse now').
 cocktail_type(shooter, b52).
 cocktail_type(long, 'cuba libre').
-cocktail_type(long, beton).
+cocktail_type(long, submarine).
 
 
 
@@ -86,13 +162,13 @@ cocktail_type(long, beton).
 cocktail_season(summer, mojito).
 cocktail_season(summer, margo).
 cocktail_season(summer, hugo).
-cocktail_season(summer, spritz).
+cocktail_season(summer, spricer).
 cocktail_season(summer, 'spritz veneziano').
 cocktail_season(summer, greentini).
 cocktail_season(winter, 'apocalypse now').
 cocktail_season(winter, b52).
 cocktail_season(summer, 'cuba libre').
-cocktail_season('all seasons', beton).
+cocktail_season('all seasons', submarine).
 
 
 
@@ -102,13 +178,13 @@ cocktail_season('all seasons', beton).
 cocktail_adj(refreshing, mojito).
 cocktail_adj('sweet istra', margo).
 cocktail_adj(sweet, hugo).
-cocktail_adj(refreshing, spritz).
+cocktail_adj(refreshing, spricer).
 cocktail_adj(relaxing, 'spritz veneziano').
 cocktail_adj(plain, greentini).
 cocktail_adj(powerful, 'apocalypse now').
 cocktail_adj(warming, b52).
 cocktail_adj(refreshing, 'cuba libre').
-cocktail_adj(beerish, beton).
+cocktail_adj(beerish, submarine).
 
 
 
@@ -117,13 +193,13 @@ cocktail_adj(beerish, beton).
 cocktail_strength(light, mojito).
 cocktail_strength(weak, margo).
 cocktail_strength(weak, hugo).
-cocktail_strength(light, spritz).
+cocktail_strength(light, spricer).
 cocktail_strength(medium, 'spritz veneziano').
 cocktail_strength(medium, greentini).
 cocktail_strength(strong, 'apocalypse now').
 cocktail_strength(strong, b52).
 cocktail_strength(light, 'cuba libre').
-cocktail_strength(medium, beton).
+cocktail_strength(medium, submarine).
 
 
 
