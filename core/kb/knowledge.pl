@@ -40,6 +40,9 @@ cocktail(submarine, beer, [beer, rakija]).
 % recipes
 % -----------------------------------------------------------------------
 cocktail_recipe(mojito, "
+
+MOJITO
+
 1. 
 Muddle sugar and lime wedges together in a glass.
 Press down on 2 wedges of lime and 2 teaspoons of caster sugar in a tankard or jar using a large spoon or pestle to extract flavour and aroma.
